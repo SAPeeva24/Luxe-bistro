@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Bistro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Lux Bistro Logo">
+            </div>
+            <ul>
+                <li><a href="#" data-i18n="nav.home">Home</a></li>
+                <li><a href="#menu" data-i18n="nav.menu">Menu</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button data-lang="bg">BG</button>
+                <button data-lang="en">EN</button>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Welcome to Lux Bistro</h1>
+            <p data-i18n="hero.subtitle">Enjoy exquisite cuisine in an elegant setting.</p>
+            <a href="#menu" class="button" data-i18n="hero.button">View Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2 data-i18n="menu.title">Menu</h2>
+        <div class="menu-filters">
+            <button data-category="all" data-i18n="menu.all">All</button>
+            <button data-category="appetizers" data-i18n="menu.appetizers">Appetizers</button>
+            <button data-category="main_dishes" data-i18n="menu.main_dishes">Main Dishes</button>
+            <button data-category="desserts" data-i18n="menu.desserts">Desserts</button>
+            <button data-category="soups" data-i18n="menu.soups">Soups</button>
+            <button data-category="fish" data-i18n="menu.fish">Fish</button>
+        </div>
+
+        <div class="search-sort-container">
+            <input type="text" id="search-input" placeholder="Search menu...">
+            <select id="sort-select">
+                <option value="default">Sort by</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+            </select>
+        </div>
+
+        <div class="menu-items">
+            <div class="menu-item appetizers">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80"
+                    alt="Bruschetta">
+                <h3>Bruschetta</h3>
+                <p>Toasted bread topped with tomatoes, basil, and balsamic glaze.</p>
+                <span class="price">12.99 лв.</span>
+                <button class="add-to-cart" data-name="Bruschetta" data-price="12.99"
+                    data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80">Add
+                    to Cart</button>
+            </div>
+            <div class="menu-item main_dishes">
+                <img src="https://images.unsplash.com/photo-1512621776951-a571426e8f6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="Pasta Carbonara">
+                <h3>Pasta Carbonara</h3>
+                <p>Spaghetti with eggs, pancetta, Parmesan cheese, and black pepper.</p>
+                <span class="price">18.99 лв.</span>
+                <button class="add-to-cart" data-name="Pasta Carbonara" data-price="18.99"
+                    data-image="https://images.unsplash.com/photo-1512621776951-a571426e8f6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add
+                    to Cart</button>
+            </div>
+            <div class="menu-item desserts">
+                <img src="https://images.unsplash.com/photo-1482049016688-2d36e1b9ca5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80"
+                    alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich chocolate cake with chocolate ganache.</p>
+                <span class="price">9.99 лв.</span>
+                <button class="add-to-cart" data-name="Chocolate Cake" data-price="9.99"
+                    data-image="https://images.unsplash.com/photo-1482049016688-2d36e1b9ca5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80">Add
+                    to Cart</button>
+            </div>
+            <div class="menu-item soups">
+                <img src="https://images.unsplash.com/photo-1559178553-4ca57993ca5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="Tomato Soup">
+                <h3>Tomato Soup</h3>
+                <p>Creamy tomato soup with basil and croutons.</p>
+                <span class="price">7.99 лв.</span>
+                <button class="add-to-cart" data-name="Tomato Soup" data-price="7.99"
+                    data-image="https://images.unsplash.com/photo-1559178553-4ca57993ca5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add
+                    to Cart</button>
+            </div>
+            <div class="menu-item fish">
+                <img src="https://images.unsplash.com/photo-1546793665-490e799129bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="Grilled Salmon">
+                <h3>Grilled Salmon</h3>
+                <p>Grilled salmon with roasted vegetables.</p>
+                <span class="price">24.99 лв.</span>
+                <button class="add-to-cart" data-name="Grilled Salmon" data-price="24.99"
+                    data-image="https://images.unsplash.com/photo-1546793665-490e799129bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add
+                    to Cart</button>
+            </div>
+            <div class="menu-item appetizers">
+                <img src="https://images.unsplash.com/photo-1625869011494-5ee32a1c6f8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="Caprese Salad">
+                <h3>Caprese Salad</h3>
+                <p>Fresh mozzarella, tomatoes, and basil with balsamic glaze.</p>
+                <span class="price">14.99 лв.</span>
+                <button class="add-to-cart" data-name="Caprese Salad" data-price="14.99"
+                    data-image="https://images.unsplash.com/photo-1625869011494-5ee32a1c6f8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add
+                    to Cart</button>
+            </div>
+            <div class="menu-item main_dishes">
+                <img src="https://images.unsplash.com/photo-1567620869444-75d5929f178e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80"
+                    alt="Steak">
+                <h3>Steak</h3>
+                <p>Grilled steak with mashed potatoes and asparagus.</p>
+                <span class="price">29.99 лв.</span>
+                <button class="add-to-cart" data-name="Steak" data-price="29.99"
+                    data-image="https://images.unsplash.com/photo-1567620869444-75d5929f178e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80">Add
+                    to Cart</button>
+            </div>
+            <div class="menu-item desserts">
+                <img src="https://images.unsplash.com/photo-1551024709-64363a017c99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80"
+                    alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Classic Italian dessert with coffee and mascarpone.</p>
+                <span class="price">10.99 лв.</span>
+                <button class="add-to-cart" data-name="Tiramisu" data-price="10.99"
+                    data-image="https://images.unsplash.com/photo-1551024709-64363a017c99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80">Add
+                    to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 data-i18n="about.title">About</h2>
+        <p data-i18n="about.text">Lux Bistro is a place where you can enjoy delicious food and a pleasant atmosphere.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 data-i18n="contact.title">Contact</h2>
+        <p data-i18n="contact.address">123 Lux Street, Sofia</p>
+        <p data-i18n="contact.phone">Phone: +359 888 123 456</p>
+        <p data-i18n="contact.email">info@luxbistro.bg</p>
+    </section>
+
+    <footer>
+        <p data-i18n="footer.copyright">&copy; 2025 Lux Bistro</p>
+    </footer>
+
+    <div class="cart">
+        <h2>Cart</h2>
+        <ul class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p class="cart-empty-message" style="display: none;">Your cart is empty.</p>
+        <p class="cart-total">Total: 0.00 лв.</p>
+        <button class="checkout">Checkout</button>
+    </div>
+
+    <div class="order-form" id="order-form">
+        <h2>Order Form</h2>
+        <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error-message" id="name-error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="email-error"></div>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <div class="error-message" id="phone-error"></div>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <div class="error-message" id="address-error"></div>
+
+            <button type="submit">Submit Order</button>
+        </form>
+        <p id="success-message" style="display: none; color: green; text-align: center; margin-top: 1rem;">
+            Thank you for your order!
+        </p>
+    </div>
+
+    <div id="add-to-cart-animation">
+        Added to Cart!
+    </div>
+</body>
+
+</html>
+<div id="checkout-form" style="display: none;">
+    <h2>Checkout Form</h2>
+    <form id="order-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</div>
